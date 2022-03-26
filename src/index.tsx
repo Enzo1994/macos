@@ -4,11 +4,11 @@ import ReactDOM from 'react-dom';
 import Desktop from './pages/desktop';
 import reportWebVitals from './reportWebVitals';
 import { getDPR } from './utils';
-import { getBGColor } from './scripts/init_phase';
+// import { getBGColor } from './scripts/init_phase';
 
 
 getDPR()
-getBGColor()
+// getBGColor()
 
 ReactDOM.render(
   <React.StrictMode>
