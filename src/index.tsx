@@ -1,12 +1,18 @@
+import './index.scss'
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import Desktop from './pages/desktop';
 import reportWebVitals from './reportWebVitals';
+import { getDPR } from './utils';
+import { getBGColor } from './scripts/init_phase';
+
+
+getDPR()
+getBGColor()
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Desktop />
   </React.StrictMode>,
   document.getElementById('root')
 );

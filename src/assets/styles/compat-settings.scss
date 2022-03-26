@@ -1,0 +1,13 @@
+$device-ratio: 1;
+
+$i: 0;
+@while $i < 3 {
+    .device-ratio-#{$i} {
+        $device-ratio: i
+    }
+    $i: $i + 1
+}
+
+@function calcPx($px){
+    @return #{$px * $device-ratio}px
+}

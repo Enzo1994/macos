@@ -1,0 +1,17 @@
+$i: 0;
+@while $i < 3 {
+    .device-ratio-#{$i} {
+        $device-ratio: $i !global;
+    }
+    $i: $i + 1
+}
+
+@function calcPx($px){
+    @return calc(#{$px}px / #{$device-ratio})
+}
+
+.topbar {
+    width: 100vw;
+    height: calcPx(48);
+    filter: blur(100);
+}
