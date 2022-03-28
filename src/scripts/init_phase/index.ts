@@ -13,8 +13,8 @@ function getBGColor(): Promise<string> {
             offscreenCanvas.height = height
             ctx.drawImage(img, 0, 0)
             let linearGradient = 'linear-gradient(to right'
-            for (let i = 1; i < 4; i++) {
-                const imgData = ctx.getImageData(width * i / 4, offscreenCanvas.height / 2 - 1, 1, 1)
+            for (let i = 1; i < 3; i++) {
+                const imgData = ctx.getImageData(width * i / 3, offscreenCanvas.height / 3 - 1, 1, 1)
                 linearGradient += `,rgb(${imgData.data.slice(0, 3).reduce((prev, cur) => (prev ? prev + ',' + cur : String(cur)), '')})`
             }
             linearGradient += ')'

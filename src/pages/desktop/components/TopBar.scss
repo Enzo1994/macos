@@ -1,17 +1,25 @@
-$i: 0;
-@while $i < 3 {
-    .device-ratio-#{$i} {
-        $device-ratio: $i !global;
-    }
-    $i: $i + 1
-}
-
-@function calcPx($px){
-    @return calc(#{$px}px / #{$device-ratio})
-}
-
 .topbar {
+    display: flex;
+    align-items: center;
     width: 100vw;
     height: calcPx(48);
-    background: rgba(255,255,255,.8)
+    background: rgba(255,255,255,.8);
+    font-size: calcPx(28);
+
+    .logo{
+        margin: 0 calcPx(34);
+        margin-top: -2px;
+        font-size: calcPx(38)
+    }
+    .title{
+        margin-right: calcPx(60);
+        font-weight: 900;
+    }
+    .options{
+        display: flex;
+        gap: calcPx(60);
+        li{
+            list-style: none;
+        }
+    }
 }
