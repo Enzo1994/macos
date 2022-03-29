@@ -1,3 +1,3 @@
 export function getDPR(){
-    document.body.classList.add('device-ratio-' + window.devicePixelRatio)
+    document.body.style.setProperty('--dpr', String(window.devicePixelRatio))
 }

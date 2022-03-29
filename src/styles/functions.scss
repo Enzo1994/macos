@@ -1,0 +1,3 @@
+@function calcPx($px){
+    @return calc(#{$px}px / var(--dpr))
+}

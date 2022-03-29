@@ -1,4 +1,4 @@
-$desktopBg: '../../assets/images/others/lightmode-bg.jpg';
+$desktopBg: 'lightmode-bg.jpg';
 
 .darkmode {
     $desktopBg: '../../assets/images/others/darkmode-bg.jpg';
@@ -7,6 +7,6 @@ $desktopBg: '../../assets/images/others/lightmode-bg.jpg';
 .desktop{
     width:100vw;
     height: 100vh;
-    background: url(#{$desktopBg}) no-repeat center/cover
+    background: url('../../assets/images/others/' + #{$desktopBg}) no-repeat center/cover
 }
 

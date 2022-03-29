@@ -1,3 +1,4 @@
+import FaceTime from "../../components/facetime/facetime";
 import { formatDate } from "../../utils/date";
 import Dock from "./components/dock";
 import TopBar from "./components/TopBar";
@@ -8,5 +9,6 @@ export default function Desktop () {
     return (<div className="desktop">
         <TopBar />
         <Dock />
+        <FaceTime/>
         {formatDate().day}</div>)
 }
