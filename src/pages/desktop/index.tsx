@@ -1,7 +1,7 @@
 import FaceTime from "../../components/facetime/facetime";
 import { formatDate } from "../../utils/date";
 import Dock from "./components/dock";
-import TopBar from "./components/TopBar";
+import TopBar from "./components/top-bar";
 import './index.scss'
 
 

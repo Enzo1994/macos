@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getBGColor } from "../../../scripts/init_phase";
-import "./TopBar.scss";
+import "./top-bar.scss";
 
 const TopBar = () => {
   const [options] = useState(["文件", "编辑", "显示"]);

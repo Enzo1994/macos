@@ -1,0 +1,18 @@
+.facetime{
+    display: flex;
+    width:calcPx(1650);
+    height: calcPx(800);
+    border:1px solid white;
+    border-radius: 8px;
+    overflow: hidden;
+    .facetime-connections{
+        flex-shrink: 0;
+        width:calcPx(630);
+        height: 100%;
+        background-color: aqua;
+    }
+    #faceTimeVideo {
+    
+
+    }
+}
