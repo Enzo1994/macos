@@ -20,6 +20,18 @@ const TopBar = () => {
           <li key={item}>{item}</li>
         ))}
       </ul>
+      <div className="control-btns">
+        <button className="battery"></button>
+        <button className="wifi"></button>
+        <button className="control-center"></button>
+        <button className="siri"></button>
+
+      </div>
+      <div className="date">
+        <span className="daymonth">4月10日</span>
+        <span className="week">周日</span>
+        <span className="time">13:28</span>
+      </div>
     </div>
   );
 };

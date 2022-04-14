@@ -9,7 +9,7 @@ module.exports = override(
                 resources: [
                     path.resolve(__dirname, './src/styles/functions.scss'),
                     path.resolve(__dirname, './src/styles/variables.scss'),
-                    // path.resolve(__dirname, './src/styles/_reset.scss')
+                    path.resolve(__dirname, './src/styles/mixins.scss'),
                 ]
             }
         }

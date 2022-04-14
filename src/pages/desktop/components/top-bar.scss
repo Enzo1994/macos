@@ -22,4 +22,43 @@
             list-style: none;
         }
     }
+    .control-btns{
+        width: calcPx(250);
+        margin-left: auto;
+        display: flex;
+        justify-content: space-between;
+        button {
+            width: calcPx(32);
+            height: calcPx(32);
+            border: none;
+        }
+        .battery{
+            width: calcPx(50);
+            height: calcPx(32);
+            background: url(../../../assets/images/icons/battery.100.bolt@2x.png) no-repeat center/contain;
+
+        }
+        .wifi{
+            background: url(../../../assets/images/icons/wifi.png) no-repeat center/contain;
+
+        }
+        .control-center{
+            background: url(../../../assets/images/icons/control_center.png) no-repeat center/contain;
+            filter:contrast(100%)
+
+        }
+        .siri{
+            margin-top: 0px;
+
+            background: url(../../../assets/images/icons/siri.png) no-repeat center/contain;
+        }
+    }
+    .date{
+        width: calcPx(270);
+        margin: 0 calcPx(26) 0 calcPx(22);
+        display: flex;
+        gap:2px;
+        justify-content: space-around;
+        font-size: calcPx(28);
+    }
 }

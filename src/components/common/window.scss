@@ -1,0 +1,53 @@
+.window{
+    position: absolute;
+    border-radius: calcPx(20);
+    overflow: hidden;
+    box-shadow: 0px 1px 41px 0px rgba(0, 0, 0, 0.501);
+    .buttons{
+        display: flex;
+        gap:calcPx(10);
+        position: absolute;
+        left: calcPx(20);
+        top: calcPx(16);
+        &:hover{
+            button::after{
+                width: inherit;
+                height: inherit;
+                font-size: 18px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                line-height: 13px;
+                color: rgba(0, 0, 0, 0.9);
+            }
+            .close::after{
+                content: "+";
+                transform: rotateZ(45deg);
+                
+            }
+            .minimize::after{
+                content: "-";
+                top: -1px;
+            }
+        }
+        button{
+            position:relative;
+            width: calcPx(26);
+            height: calcPx(26);
+            border-radius: 50%;
+            border: none;
+            z-index: 999;
+
+            &.fullscreen{
+                background: #61C555;
+            }
+            &.minimize{
+                background: #F4BE4F;
+            }
+            &.close{
+                background: #EC695E;
+            }
+            @include btn-active-status
+        }
+    }
+}

@@ -1,54 +1,36 @@
-.container {
+.dock {
   margin-bottom: calcPx(8);
-
   position: fixed;
   bottom: 0;
   left: 50%;
-  height: calcPx(72);
-  border-radius: 6px;
+  height: calcPx(120);
   transform: translateX(-50%);
-  border: 1px solid #4b4b4c;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.3);
-
-  .dock {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-
-    &::before {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 50%;
-      width: 100vw;
-      height: calc(100vh + 30px);
-      transform: translateX(-50%) scale(1.05);
-      z-index: -1;
-      background: url(../../../assets/images/others/lightmode-bg.jpg) no-repeat
-        center/cover;
-      filter: blur(20px);
-    }
-  }
-
+  border: 1px solid #87879342;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, .15);  
+  backdrop-filter: blur(5px);
+  transition: all 1s ease;
+  z-index: 9999;
   ul {
-    padding: 0 calcPx(12);
+    position: relative;
+    top: 100%;
+    padding: 0 calcPx(12) calcPx(20) calcPx(12);
     display: flex;
     justify-self: center;
     align-items: baseline;
+    border-radius: calcPx(30);
     transform: translateY(calc(-100% - calcPx(6)));
     .test-icon {
       --scale: 1;
-      width: calc(calcPx(60) * var(--scale));
-      height: calc(calcPx(60) * var(--scale));
+      width: calc(calcPx(80) * var(--scale));
+      height: calc(calcPx(80) * var(--scale));
       margin-left:calc(calcPx(6) * var(--scale));
       margin-right:calc(calcPx(6) * var(--scale));
       border-radius: 9px;
       background-position: center;
       background-size: contain;
       transition: all .1s ease;
+      @include btn-active-status;
     }
   }
 }

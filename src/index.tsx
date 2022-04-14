@@ -1,20 +1,22 @@
-import './index.scss'
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Desktop from './pages/desktop';
-import reportWebVitals from './reportWebVitals';
-import { getDPR } from './utils';
+import "./index.scss";
+import React from "react";
+import ReactDOM from "react-dom";
+import Desktop from "./pages/desktop";
+import reportWebVitals from "./reportWebVitals";
+import { getDPR } from "./utils";
+import { store, StoreContext } from "./store/store";
 // import { getBGColor } from './scripts/init_phase';
 
-
-getDPR()
+getDPR();
 // getBGColor()
 
 ReactDOM.render(
   <React.StrictMode>
-    <Desktop />
+    <StoreContext.Provider value={store}>
+      <Desktop />
+    </StoreContext.Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
