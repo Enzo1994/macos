@@ -1,3 +1,9 @@
+# 
+多窗口  
+窗口 focus
+最小化
+窗口指定可拖拽区域
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,5 +1,8 @@
 .window{
     position: absolute;
+    top: 50%;
+    left: 50%;
+    // transform: translate(-50%, -50%);
     border-radius: calcPx(20);
     overflow: hidden;
     box-shadow: 0px 1px 41px 0px rgba(0, 0, 0, 0.501);

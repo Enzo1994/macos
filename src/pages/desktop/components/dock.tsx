@@ -1,6 +1,8 @@
-import { useRef, useState } from "react";
+import { BaseSyntheticEvent, MouseEventHandler, SyntheticEvent, useRef, useState } from "react";
+import { useWindowStore } from "../../../store/store";
 import "./dock.scss";
 export default function Dock() {
+  const { windowList, addToWindowList } = useWindowStore();
   const dockItemContainer = useRef<HTMLUListElement>(null);
   const [dockItems, setDockItems] = useState([
     {
@@ -100,8 +102,9 @@ export default function Dock() {
     }
   }
 
-  function clickHandler(){
-    
+  function clickHandler(e:BaseSyntheticEvent){
+    console.log(e.target.dataset.name)
+    addToWindowList({ componentName: e.target.dataset.name, width: 200, height: 200 })
   }
 
   return (
@@ -118,6 +121,7 @@ export default function Dock() {
             className="test-icon"
             key={item.name}
             style={{ backgroundImage: `url(${item.icon})` }}
+            data-name={item.nameEn}
           ></li>
         ))}
       </ul>

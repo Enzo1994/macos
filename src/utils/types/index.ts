@@ -7,7 +7,7 @@ export interface IformattedDate {
 }
 
 export interface IWindowProps {
-  id: number;
+  id?: number;
   width: number;
   height: number;
   componentName?: string;
