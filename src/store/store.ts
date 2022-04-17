@@ -1,12 +1,5 @@
-import {
-  action,
-  computed,
-  makeAutoObservable,
-  makeObservable,
-  observable,
-} from "mobx";
+import { action, makeObservable, observable } from "mobx";
 import { createContext, useContext } from "react";
-import FaceTime from "../components/facetime/facetime";
 import { IWindowProps } from "../utils/types";
 
 let id = 0;
@@ -18,18 +11,16 @@ export class WindowStore {
     makeObservable(this, {
       windowList: observable,
       addToWindowList: action,
-      removeWindowItem: action
+      removeWindowItem: action,
     });
   }
 
   addToWindowList = (winInfo: IWindowProps) => {
-    console.log("this.count", this.count);
-    this.windowList.push({...winInfo, id: id++});
+    this.windowList.push({ ...winInfo, id: id++ });
   };
 
   removeWindowItem = (id: number) => {
     const idx = this.windowList.findIndex((item) => id === item.id);
-    console.log('idx', idx);
     if (idx !== -1) {
       this.windowList.splice(idx, 1);
     }

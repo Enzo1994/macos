@@ -1,4 +1,4 @@
-import { BaseSyntheticEvent, MouseEventHandler, SyntheticEvent, useRef, useState } from "react";
+import { BaseSyntheticEvent, useRef, useState } from "react";
 import { useWindowStore } from "../../../store/store";
 import "./dock.scss";
 export default function Dock() {

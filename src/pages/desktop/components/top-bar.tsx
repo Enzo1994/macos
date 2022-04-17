@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { getBGColor } from "../../../scripts/init_phase";
 import { formatDate } from "../../../utils/date";
 import { IformattedDate } from "../../../utils/types";
 import "./top-bar.scss";
