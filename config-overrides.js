@@ -2,10 +2,6 @@ const { adjustStyleLoaders, addWebpackAlias, override } = require('customize-cra
 const fs = require('fs')
 const path = require('path')
 
-const changePublicPath = config => {
-    config.output.publicPath = 'build/';
-    return config
-}
 module.exports = override(
     adjustStyleLoaders((loader) => {
         loader.use[loader.use.length] = {
@@ -22,5 +18,4 @@ module.exports = override(
     addWebpackAlias({
         '@': path.resolve(__dirname, './src')
     }),
-    changePublicPath
 ) 
